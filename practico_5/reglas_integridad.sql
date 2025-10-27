@@ -1,0 +1,15 @@
+--Integridad de entidad:
+--Todas las claves primarias deben ser únicas y no nulas.
+--Los campos nombre y apellido de la tabla Autores, y titulo de Libros son obligatorios. (NOT NULL)
+--El título de un libro debe ser único para evitar duplicaciones accidentales.
+-- Integridad referencial:
+--La tabla Libros debe tener:
+--Una  restricción  de  clave  foránea  en  la  columna  autor_id  que referencie la tabla Autores (autor_id).
+--La tabla Ejemplares debe tener:
+--Una  restricción  de  clave  foránea  en  la  columna  libro_id  que referencie la tabla Libros (libro_id).
+--Restricción de borrado
+--No  se  puede  eliminar  un  autor  si  tiene  libros  asociados.  (ON DELETE RESTRICT)
+--Al eliminar un libro, se deben eliminar automáticamente todos sus ejemplares. (ON DELETE CASCADE)
+--Integridad de dominio:
+--El  campo  estado  de  los  ejemplares  debe  ser  uno  de  los  valores predefinidos: 'disponible', 'prestado' o 'reservado'.
+--El precio del libro debe ser mayor que 0.
