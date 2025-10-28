@@ -1,0 +1,2 @@
+-- Active: 1761572932390@@127.0.0.1@5432@practico_15
+CREATE DATABASE practico_15;
